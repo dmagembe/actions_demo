@@ -3,7 +3,7 @@ name: my workflow                               #workflow name
 
 on:                                             #events that trigger this workflow
     push:
-        branches: [main,develop]
+        branches: [main]
 
 jobs:                                           #one or more jobs
     my-job:                                     #job id or job name
