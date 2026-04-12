@@ -1,2 +1,21 @@
-#This is an empty workflow
-test
+#This is a workflow
+name: ci
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest 
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v6
+
+    - name: setup node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24
+        cache: 'npm'
+
